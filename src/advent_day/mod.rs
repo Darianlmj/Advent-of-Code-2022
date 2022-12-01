@@ -2,13 +2,51 @@ use std::{fs::File, io::BufReader};
 
 pub(crate) mod day1;
 
+/// The AdventDay struct. 
+/// Contains the day number that the user wishes to run.
 pub(crate) struct AdventDay {
+    /// The day number.
     day_num: u8,
 }
 
 pub(crate) trait AdventDayProcessor {
+    /// Creates a new AdventDay.
+    /// 
+    /// # Arguments
+    /// 
+    /// * `day_num` - The day number.
+    /// 
+    /// # Example
+    /// 
+    /// ```
+    /// use advent_of_code::advent_day::AdventDay;
+    /// 
+    /// let day = AdventDay::new(1);
+    /// ```
     fn new(day_num: u8) -> Self;
+
+    /// Reads the input file for the selected day and returns the data in the file.
+    /// 
+    /// # Example
+    /// 
+    /// ```
+    /// use advent_of_code::advent_day::AdventDay;
+    /// 
+    /// let day = AdventDay::new(1);
+    /// let data = day.read_input_file();
+    /// ```
     fn read_file(&self) -> BufReader<File>;
+
+    /// Executes the selected day's code.
+    /// 
+    /// # Example
+    /// 
+    /// ```
+    /// use advent_of_code::advent_day::AdventDay;
+    /// 
+    /// let day = AdventDay::new(1);
+    /// day.execute();
+    /// ```
     fn execute(&self);
 }
 

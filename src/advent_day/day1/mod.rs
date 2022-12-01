@@ -3,6 +3,12 @@ use std::{
     io::{BufRead, BufReader},
 };
 
+/// Finds the top three Elves carrying the most Calories. 
+/// Prints the index, number of calories and the total calories.
+/// 
+/// # Arguments
+/// 
+/// * `data` - The data from the input file.
 pub(crate) fn day1(data: BufReader<File>) {
     let mut calories: Vec<i32> = vec![];
     let mut count = 0;
