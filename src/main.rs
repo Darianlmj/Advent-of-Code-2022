@@ -1,9 +1,9 @@
 use std::env::args;
 use tracing::{error, info};
 
-mod advent_day;
+mod solutions;
 
-use advent_day::{AdventDay, AdventDayProcessor};
+use solutions::{AdventDay, AdventDayProcessor};
 
 fn main() {
     // Initialize the logger
