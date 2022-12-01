@@ -1,11 +1,11 @@
+use advent_day::{AdventDay, AdventDayProcessor};
 use std::env::args;
 use tracing::{error, info};
 
+mod advent_day;
 mod solutions;
 
-use solutions::{AdventDay, AdventDayProcessor};
-
-fn main() {
+pub fn main() {
     // Initialize the logger
     tracing_subscriber::fmt::init();
 
