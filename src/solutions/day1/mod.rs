@@ -26,7 +26,6 @@ pub(crate) fn day1(data: BufReader<File>) {
         }
     }
 
-    println!("\n====== Advent of Code Day 1 ======");
     for i in 0..3 {
         // Get the max calories and its index
         let (index, value) = calories
@@ -40,5 +39,4 @@ pub(crate) fn day1(data: BufReader<File>) {
         calories.remove(index);
     }
     println!("Total calories: {}", total);
-    println!("==================================");
 }

@@ -64,6 +64,7 @@ impl AdventDayProcessor for AdventDay {
     fn execute(&self) {
         let data = self.read_file();
 
+        println!("\n====== Advent of Code Day {} ======", self.day_num);
         match self.day_num {
             1 => day1::day1(data),
             2 => day2::day2(data),
@@ -92,5 +93,6 @@ impl AdventDayProcessor for AdventDay {
             // 25 => day12::day25(),
             _ => println!("Day {} not implemented yet", self.day_num),
         }
+        println!("==================================");
     }
 }
