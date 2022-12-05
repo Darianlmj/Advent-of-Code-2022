@@ -28,14 +28,10 @@ pub(crate) fn day4(data: BufReader<File>) {
         }
 
         // Find the overlapping pairs
-        if (range[0] >= range[2]
-            && range[0] <= range[3])
-            || (range[1] >= range[2]
-            && range[1] <= range[3])
-            || (range[2] >= range[0]
-            && range[2] <= range[1])
-            || (range[3] >= range[0]
-            && range[3] <= range[1])
+        if (range[0] >= range[2] && range[0] <= range[3])
+            || (range[1] >= range[2] && range[1] <= range[3])
+            || (range[2] >= range[0] && range[2] <= range[1])
+            || (range[3] >= range[0] && range[3] <= range[1])
         {
             total_overlapping_pairs += 1;
         }
