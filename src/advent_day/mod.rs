@@ -1,8 +1,4 @@
-use crate::solutions::day1;
-use crate::solutions::day2;
-use crate::solutions::day3;
-use crate::solutions::day4;
-use crate::solutions::day5;
+use crate::solutions::{day1, day2, day3, day4, day5, day6};
 use std::{fs::File, io::BufReader};
 
 /// The AdventDay struct.
@@ -74,7 +70,7 @@ impl AdventDayProcessor for AdventDay {
             3 => day3::day3(data),
             4 => day4::day4(data),
             5 => day5::day5(data),
-            // 6 => day6::day6(),
+            6 => day6::day6(data),
             // 7 => day7::day7(),
             // 8 => day8::day8(),
             // 9 => day9::day9(),
